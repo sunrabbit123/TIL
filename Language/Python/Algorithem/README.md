@@ -26,3 +26,4 @@
 1. [두 수의 합](./Array/07.twoSum/twoSum.py)
 2. [빗물 트래핑](./Array/08.trap/trap.py)
 3. [세 수의 합](./Array/09.threeSum/threeSum.py)
+4. [배열 파티션 1](./Array/10.arrayPairSum/arrayPairSum.py)
