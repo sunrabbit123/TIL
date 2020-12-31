@@ -1,0 +1,34 @@
+{
+  "name": "be-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_PATH=src ts-node src/server.ts",
+    "dev": "cross-env NODE_PATH=src nodemon --exec ts-node src/server.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.13.1",
+    "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "joi": "^17.3.0",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-helmet": "^6.0.0",
+    "koa-router": "^10.0.0"
+  },
+  "devDependencies": {
+    "@prisma/cli": "^2.13.1",
+    "@types/joi": "^14.3.4",
+    "@types/koa": "^2.11.6",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-helmet": "^6.0.1",
+    "@types/koa-router": "^7.4.1",
+    "@types/node": "^14.14.17",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
