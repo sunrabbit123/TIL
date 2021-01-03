@@ -4,7 +4,7 @@ import crypto from 'crypto';
 import 'dotenv/config';
 import Joi from 'joi';
 
-const hashPassword : Function = (password : string) => {
+const hashPassword : Function = (password : string) : string => {
     return crypto.createHmac(String(process.env.HASH_ALGORITHM), String(process.env.HASH_KEY))
         .update(password)
         .digest()
@@ -68,7 +68,6 @@ export const login = async (ctx : Context) => {
             }
         })
     )[0];
-
     ctx.assert(user, 400);
 
     ctx.status = 200;
