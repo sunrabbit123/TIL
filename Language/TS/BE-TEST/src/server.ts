@@ -1,7 +1,6 @@
 import app from "./app";
-import * as dotenv from "dotenv";
+import 'dotenv/config';
 
-dotenv.config();
 
 const port = process.env.PORT || 4568;
 

@@ -1,6 +1,6 @@
-import * as Koa from "koa";
-import * as bodyParser from "koa-bodyparser";
-import * as helmet from "koa-helmet";
+import Koa from "koa";
+import bodyParser from "koa-bodyparser";
+import helmet from "koa-helmet";
 import { logger } from "./middleware/logger";
 
 import { router } from "./router";
