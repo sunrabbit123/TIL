@@ -47,3 +47,34 @@ export const register = async (ctx: Context) => {
         email : user.email,
     }
 }
+
+export const login = async (ctx : Context) => {
+    const bodyForm = Joi.object().keys({
+        email: Joi.string().email().required(),
+        password: Joi.string().required(),
+    });
+
+    ctx.assert(!bodyForm.validate(ctx.request.body).error, 400);
+
+    const prisma = new PrismaClient();
+
+    const { email, password } = ctx.request.body;
+    const hashedPassword = hashPassword(password);
+    const user = (
+        await prisma.user.findMany({
+            where: {
+                email : email,
+                password : hashedPassword,
+            }
+        })
+    )[0];
+
+    ctx.assert(user, 400);
+
+    ctx.status = 200;
+    ctx.body = {
+        id: user.id
+    };
+
+
+};
