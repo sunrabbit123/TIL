@@ -29,3 +29,7 @@
 4. [배열 파티션 1](./Array/10.arrayPairSum/arrayPairSum.py)
 5. [자신을 제외한 배열의 곱](./Array/11.productExceptSelf/productExceptSelf.py)
 6. [주식을 사고팔기 가장 좋은 시점](./Array/12.maxProfit/maxProfit.py)
+
+#### 연결 리스트
+1. [팔린드롬 연결 리스트](./List/13.isPalindrome/isPalindrome.py)
+
