@@ -11,6 +11,7 @@ def maxProfit(prices) -> int:
 
     return max_price
 
+
 # 2. 저점과 현재 값과의 차이 계산
 def maxProfit(prices) -> int:
     profit = 0
@@ -19,6 +20,5 @@ def maxProfit(prices) -> int:
     for price in prices:
         min_price = min(min_price, price)
         profit = max(profit, price - min_price)
-    
+
     return profit
-    

@@ -3,6 +3,7 @@ output = 4
 
 # asc sort
 
+
 def arrayPairSum(nums: List[int]):
     sum = 0
     pair = []
@@ -13,10 +14,12 @@ def arrayPairSum(nums: List[int]):
         if len(pair) == 2:
             sum += min(pair)
             pair = []
-    
+
     return sum
 
+
 # 짝수 번째 값 계산
+
 
 def arrayPairSum(nums: List[int]):
     sum = 0
@@ -28,6 +31,6 @@ def arrayPairSum(nums: List[int]):
 
     return sum
 
-def arrayPairSum(nums : List[int]):
+
+def arrayPairSum(nums: List[int]):
     return sum(sorted(nums[::2]))
-    
