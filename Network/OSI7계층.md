@@ -1,4 +1,4 @@
-# 1월 18일
+# OSI 7계층
 
 [OSI 7계층](https://www.youtube.com/watch?v=1pfTxp25MA8&feature=youtu.be)을 보면서 OSI 7계층에 대해서 알게되었지만
 실질적으로는 지금 쓰고 있는 프로토콜 아키텍쳐는 TCP/IP의 형태가 많기때문에 
