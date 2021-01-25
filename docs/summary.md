@@ -1,6 +1,6 @@
 # Summary
 
-* [들어가기에 앞서](./)
+* [들어가기에 앞서]()
 
 - Network
     1. [IP주소와 MAC주소](./Network/IP&MAC.md)
