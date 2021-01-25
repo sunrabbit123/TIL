@@ -1,6 +1,6 @@
 # Summary
 
-* [들어가기에 앞서]()
+* [들어가기에 앞서](README.md)
 
 * Network
     * [IP주소와 MAC주소](Network/IP&MAC.md)
