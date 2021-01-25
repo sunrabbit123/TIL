@@ -1,0 +1,474 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>의존성 주입 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../docs/gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../docs/gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../docs/gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../docs/gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../docs/gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../docs/gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../Language/Python/ALgorithem/List/README.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../docs/">
+            
+                <a href="../docs/">
+            
+                    
+                    들어가기에 앞서
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Network</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Network/IP&MAC.html">
+            
+                <a href="../Network/IP&MAC.html">
+            
+                    
+                    IP주소와 MAC주소
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Network/OSI7계층.html">
+            
+                <a href="../Network/OSI7계층.html">
+            
+                    
+                    OSI7계층
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Security</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Security/Hash.html">
+            
+                <a href="../Security/Hash.html">
+            
+                    
+                    Hash함수
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../Security/publicKey_privateKey.html">
+            
+                <a href="../Security/publicKey_privateKey.html">
+            
+                    
+                    공개키와 비대칭키
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../Security/eledronic_signature.html">
+            
+                <a href="../Security/eledronic_signature.html">
+            
+                    
+                    전자서명
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Algorithem</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Language/Python/Algorithem/">
+            
+                <a href="../Language/Python/Algorithem/">
+            
+                    
+                    들어가기에 앞서
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../Language/Python/Algorithem/String/README.md">
+            
+                <span>
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../Language/Python/Algorithem/Array/README.md">
+            
+                <span>
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../Language/Python/ALgorithem/List/README.md">
+            
+                <span>
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">개발 기술</li>
+        
+        
+    
+        <li class="chapter active" data-level="5.1" data-path="DI.html">
+            
+                <a href="DI.html">
+            
+                    
+                    의존성 주입
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../docs" >의존성 주입</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="di">DI</h1>
+<p>DI&#xB294; Dependency Injection&#xC774;&#xB77C;&#xACE0; &#xBD88;&#xB9AC;&#xB294;&#xB370;, &#xC758;&#xC874;&#xC131; &#xC8FC;&#xC785;&#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>&#xC774;&#xB294; &#xC774;&#xC81C; &#xC2A4;&#xD504;&#xB9C1;&#xC5D0;&#xC11C;&#xB294; IOC&#xB77C;&#xACE0; &#xBD88;&#xB9AC;&#xAE30;&#xB3C4;&#xD558;&#xC9C0;&#xB9CC; DI&#xB77C;&#xACE0; &#xBD88;&#xB9AC;&#xAE30;&#xB3C4; &#xD55C;&#xB2E4;.</p>
+<blockquote>
+<p>IOC&#xC640; DI&#xB294; &#xC5C4;&#xBC00;&#xD788; &#xB530;&#xC9C0;&#xBA74; &#xB2E4;&#xB974;&#xC9C0;&#xB9CC;, &#xC774;&#xB294; &#xC5B4;&#xB5BB;&#xAC8C; &#xD574;&#xC11D;&#xD558;&#xB290;&#xB0D0;&#xC758; &#xCC28;&#xC774;&#xC774;&#xAE30;&#xB3C4; &#xD558;&#xB2E4;.
+IOC : &#xC5ED;&#xC804; &#xCEE8;&#xD14C;&#xC774;&#xB108;, DI : &#xC758;&#xC874;&#xC131; &#xC81C;&#xC5B4;</p>
+</blockquote>
+<p>&#xBA87;&#xAC00;&#xC9C0; &#xC608;&#xC2DC; &#xCF54;&#xB4DC;&#xB97C; &#xC0B4;&#xD3B4;&#xBCF4;&#xC790;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SubHello</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SubHello</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;sub Hello&quot;</span>);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Hello</span><span class="hljs-params">()</span> </span>{
+        SubHello subHello = <span class="hljs-keyword">new</span> SubHello();
+        System.out.println(<span class="hljs-string">&quot;hello?&quot;</span>);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Hello hello = <span class="hljs-keyword">new</span> Hello();
+    }
+}
+</code></pre>
+<p>&#xC774; &#xCF54;&#xB4DC;&#xB97C; &#xBCF4;&#xBA74; <code>Hello</code>&#xAC00; &#xC2DC;&#xC791;&#xC774; &#xB418;&#xC5B4;&#xC57C; <code>SubHello</code>&#xAC00; &#xC2DC;&#xC791;&#xC774; &#xB41C;&#xB2E4;.
+&#xC774;&#xB7F0; &#xACBD;&#xC6B0; <code>SubHello</code>&#xAC00; <code>Hello</code>&#xC5D0; &#xC758;&#xC874;&#xC801;&#xC774;&#xB2E4;&#xB77C;&#xACE0; &#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xC774;&#xC758; &#xACBD;&#xC6B0; <code>Hello</code>&#xB85C; <code>SubHello</code> &#xC870;&#xC791;&#xC774; &#xD798;&#xB4DC;&#xB2C8; &#xC88B;&#xB2E4;&#xACE0;  &#xD560; &#xC218;&#xB294; &#xC5C6;&#xB2E4;.
+&#xC774;&#xB97C; &#xC758;&#xB3C4;&#xD55C; &#xACBD;&#xC6B0;&#xBA74; &#xBAA8;&#xB97C;&#xAE4C;</p>
+<p>&#xB2E4;&#xC74C; &#xCF54;&#xB4DC;&#xB97C; &#xBCF4;&#xC790;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Hello</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;hello?&quot;</span>);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SubHello</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SubHello</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;sub Hello&quot;</span>);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Hello hello = <span class="hljs-keyword">new</span> Hello();
+        SubHello subHello = <span class="hljs-keyword">new</span> SubHello();
+    }
+}
+</code></pre>
+<p>&#xB2E4;&#xC74C; &#xCF54;&#xB4DC;&#xB294; &#xC804; &#xBB38;&#xC81C;&#xC758; &#xD574;&#xACB0;&#xC810;&#xC744; &#xD574;&#xACB0;&#xC740; &#xD558;&#xC600;&#xC9C0;&#xB9CC;
+<code>Hello</code>&#xC640; <code>SubHello</code>&#xAC00; &#xB530;&#xB85C; &#xB180;&#xAE30;&#xC5D0; <code>Hello</code>&#xB85C; <code>SubHello</code>&#xB97C; &#xC870;&#xC791;&#xD558;&#xAE30;&#xB294; &#xB9E4;&#xC6B0; &#xD798;&#xB4E4;&#xB2E4;. &#xC774;&#xB7F0; &#xACBD;&#xC6B0; &#xACB0;&#xD569;&#xB3C4;&#xAC00; &#xB0AE;&#xB2E4;&#xACE0; &#xD55C;&#xB2E4;. &#xB450; <code>Hello</code>&#xC640; <code>SubHello</code>&#xB294; &#xAD00;&#xACC4;&#xAC00; &#xC5C6;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;.</p>
+<p>&#xADF8;&#xB7FC; &#xC6D0;&#xD558;&#xB294;&#xAC74; &#xB450;&#xAC00;&#xC9C0;&#xAC00; &#xB41C;&#xB2E4;.</p>
+<ol>
+<li>&#xCF54;&#xB4DC;&#xC758; &#xC758;&#xC874;&#xB3C4;&#xB294; &#xB0AE;&#xCD98;&#xB2E4;.</li>
+<li>&#xCF54;&#xB4DC;&#xC758; &#xACB0;&#xD569;&#xB3C4;&#xB97C; &#xB192;&#xC778;&#xB2E4;.</li>
+</ol>
+<p>&#xADF8;&#xB7EC;&#xAE30;&#xC5D0; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xCF54;&#xB4DC;&#xAC00; &#xC0DD;&#xACA8;&#xB09C;&#xB2E4;.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SubHello</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SubHello</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;sub Hello&quot;</span>);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> </span>{
+
+    <span class="hljs-keyword">private</span> SubHello subHello;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Hello</span><span class="hljs-params">(SubHello subHello)</span> </span>{
+        <span class="hljs-keyword">this</span>.subHello = subHello;
+        System.out.println(<span class="hljs-string">&quot;hello?&quot;</span>);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        SubHello subHello = <span class="hljs-keyword">new</span> SubHello();
+        Hello hello = <span class="hljs-keyword">new</span> Hello(subHello);
+    }
+}
+</code></pre>
+<p>&#xC774; &#xACBD;&#xC6B0; <code>SubHello</code>&#xB97C; <code>Hello</code>&#xC5D0; &#xB123;&#xC74C;&#xC73C;&#xB85C;&#xC368;
+&#xB450;&#xAC00;&#xC9C0;&#xC758; &#xBB38;&#xC81C;&#xB97C; &#xD574;&#xACB0;&#xD558;&#xC600;&#xB2E4;.</p>
+<p><code>Hello</code>&#xB85C; <code>SubHello</code>&#xB97C; &#xC870;&#xC791;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xBA70;, <code>SubHello</code>&#xAC00; &#xB2E8;&#xB3C5;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xC774; &#xB41C;&#xB2E4;.</p>
+<blockquote>
+<p><code>Hello</code> &lt;- <code>SubHello</code></p>
+</blockquote>
+<p>&#xC2A4;&#xD504;&#xB9C1;&#xC5D0;&#xC11C; IOC&#xB77C;&#xB294; &#xAE30;&#xC220;&#xB85C; DI&#xB97C; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;.</p>
+<p>&#xC774;&#xC81C; &#xC2A4;&#xD504;&#xB9C1;&#xC758; &#xACBD;&#xC6B0;&#xB294; &#xC800;&#xB294; &#xC548;&#xD558;&#xAE30;&#xC5D0;, &#xC5B8;&#xC820;&#xAC00; &#xBC30;&#xC6B8; &#xCBE4;&#xC5D0; &#xB2E4;&#xC2DC; &#xC5B8;&#xAE09;&#xD558;&#xC9C0;&#xC54A;&#xC744;&#xAE4C; &#xC2F6;&#xB2E4;.</p>
+<blockquote>
+<p>&#xCF54;&#xB4DC; &#xCD9C;&#xCC98; : <a href="https://b-programmer.tistory.com/255" target="_blank">https://b-programmer.tistory.com/255</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Language/Python/ALgorithem/List/README.md" class="navigation navigation-prev navigation-unique" aria-label="Previous page: List">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"의존성 주입","level":"5.1","depth":1,"previous":{"title":"List","level":"4.4","depth":1,"path":"../Language/Python/ALgorithem/List/README.md","ref":"../Language/Python/ALgorithem/List/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"../Dev_Tech/DI.md","mtime":"2021-01-10T05:13:13.726Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-25T10:28:58.273Z"},"basePath":"../docs","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../docs/gitbook/gitbook.js"></script>
+    <script src="../docs/gitbook/theme.js"></script>
+    
+        
+        <script src="../docs/gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../docs/gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../docs/gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../docs/gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../docs/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../docs/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
