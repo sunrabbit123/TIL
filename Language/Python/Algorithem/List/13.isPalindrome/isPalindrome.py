@@ -26,6 +26,7 @@ def isPalindrome(head) -> bool:
 #2 Deque 이용
 
 from typing import Deque
+import collections
 
 def isPalindrome(head) -> bool:
     q: Deque = collections.deque()
@@ -41,7 +42,6 @@ def isPalindrome(head) -> bool:
         q.append(i)
     # 달라진점 
     while len(q) > 1:
-        if q.popleft() !- q.pop():
+        if q.popleft() != q.pop():
             return False
-    ######
     return True
