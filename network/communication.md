@@ -70,5 +70,5 @@
     - 전송시간 지연이 크기에 주로 `점 대 점`(Point to Point) 연결 방식을 이용한다.
     - 프로토콜 : `PPP`, `HDLC`, `SDLC`, `HNAS`, `ISDN`, `X.25`, `Frame Relay`, `ATM` 등
 ### 특수 네트워크
-1. VAN(Value Added Network)
+1. VAN(Value Added Network, 부가가치 통신망)
     - `VAN`은 부가가치 통신망으로 `WAN`, `MAN`에 부가적인 통신 기능이나 응용 소프트웨어들을 부가한 통신망이다.
